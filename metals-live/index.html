@@ -1,58 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0b0b0c" />
-  <title>Gold & Silver Live Rates</title>
-  <style>
-    :root{--bg:#0b0b0c;--card:#141416;--card2:#19191c;--text:#f6f6f7;--muted:#9b9ba3;--line:#2a2a2f;--gold:#d7b45a;--silver:#c9ccd2;--green:#6fd19a;--red:#ff8585}
-    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top,#171719 0,#0b0b0c 42%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
-    .wrap{width:min(980px,calc(100% - 28px));margin:0 auto;padding:28px 0 48px}.top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:26px}.brand h1{font-size:clamp(25px,4vw,42px);line-height:1.05;margin:0 0 8px;letter-spacing:-.04em}.brand p{margin:0;color:var(--muted);font-size:14px}.live{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#111113;padding:9px 12px;border-radius:999px;font-size:12px;color:#d9d9dd;white-space:nowrap}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 14px rgba(111,209,154,.8)}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,var(--card2),var(--card));padding:22px;min-height:220px;position:relative;overflow:hidden}.card:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-80px;top:-80px;filter:blur(10px);opacity:.08}.gold:after{background:var(--gold)}.silver:after{background:var(--silver)}.eyebrow{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em}.metal{font-size:18px;font-weight:650;color:var(--text);text-transform:none;letter-spacing:0}.price{font-size:clamp(32px,6vw,58px);line-height:1;margin-top:34px;letter-spacing:-.05em;font-weight:760}.unit{font-size:14px;color:var(--muted);margin-top:9px}.subrow{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px}.metric{color:var(--muted);font-size:12px}.metric b{display:block;color:var(--text);font-size:15px;margin-top:4px}.section-title{margin:30px 0 12px;font-size:16px;color:#e8e8eb}.calc{border:1px solid var(--line);border-radius:24px;background:#111113;padding:20px}.calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:7px}.field input,.field select{width:100%;background:#18181b;border:1px solid #2b2b30;color:var(--text);border-radius:14px;padding:13px 14px;font-size:15px;outline:none}.result{margin-top:16px;border-top:1px solid var(--line);padding-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.result .box span{display:block;color:var(--muted);font-size:12px}.result .box strong{display:block;font-size:20px;margin-top:5px}.profit{color:var(--green)!important}.loss{color:var(--red)!important}.footer{margin-top:22px;color:#777780;font-size:11px;line-height:1.5}.btn{border:1px solid var(--line);background:#18181b;color:#eee;border-radius:12px;padding:8px 11px;font-size:12px;cursor:pointer}.btn:hover{background:#202024}.error{margin-top:12px;color:#ffb4b4;font-size:12px;display:none}
-    @media(max-width:720px){.top{align-items:flex-start}.grid{grid-template-columns:1fr}.calc-grid,.result{grid-template-columns:1fr}.card{min-height:200px}.price{margin-top:26px}.live{font-size:11px;padding:8px 10px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0c">
+<title>India Gold & Silver Rates</title>
+<style>
+:root{--bg:#0b0b0c;--card:#141416;--line:#29292f;--text:#f6f6f7;--muted:#9898a2;--gold:#d6b35c;--silver:#cbd0d8;--green:#78d6a3;--red:#ff8b8b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#19191c 0,#0b0b0c 42%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}.wrap{width:min(980px,calc(100% - 28px));margin:auto;padding:28px 0 50px}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:24px}.brand h1{margin:0 0 8px;font-size:clamp(28px,5vw,46px);line-height:1.03;letter-spacing:-.045em}.brand p{margin:0;color:var(--muted);font-size:14px}.badge{border:1px solid var(--line);background:#111113;border-radius:999px;padding:9px 12px;font-size:12px;color:#ddd;white-space:nowrap}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:7px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,#19191c,#141416);padding:22px;min-height:224px;position:relative;overflow:hidden}.card:after{content:"";position:absolute;width:190px;height:190px;right:-95px;top:-95px;border-radius:50%;opacity:.08}.gold:after{background:var(--gold)}.silver:after{background:var(--silver)}.eyebrow{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em}.eyebrow strong{color:#fff;font-size:18px;text-transform:none;letter-spacing:0}.price{font-size:clamp(34px,6vw,60px);font-weight:760;letter-spacing:-.05em;line-height:1;margin-top:32px}.unit{color:var(--muted);font-size:13px;margin-top:9px}.subrow{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px}.metric{font-size:12px;color:var(--muted)}.metric b{display:block;color:#fff;font-size:15px;margin-top:4px}.section-title{font-size:16px;margin:28px 0 12px}.calc{border:1px solid var(--line);background:#111113;border-radius:24px;padding:20px}.calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px}.field input,.field select{width:100%;border:1px solid #2b2b30;border-radius:14px;background:#18181b;color:#fff;padding:13px 14px;font-size:15px}.result{border-top:1px solid var(--line);margin-top:16px;padding-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.box span{display:block;color:var(--muted);font-size:12px}.box strong{display:block;font-size:20px;margin-top:5px}.profit{color:var(--green)!important}.loss{color:var(--red)!important}.source{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}.source a{color:#ddd;text-decoration:none;border:1px solid var(--line);background:#17171a;border-radius:12px;padding:9px 12px;font-size:12px}.source a:hover{background:#202025}.footer{margin-top:20px;color:#777781;font-size:11px;line-height:1.55}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.calc-grid,.result{grid-template-columns:1fr}.top{flex-direction:column}.badge{align-self:flex-start}.card{min-height:205px}.price{margin-top:26px}}
+</style>
 </head>
 <body>
-  <main class="wrap">
-    <div class="top">
-      <div class="brand"><h1>Gold & Silver<br>Live Rates</h1><p>India spot estimate · INR</p></div>
-      <div style="display:flex;gap:8px;align-items:center"><button class="btn" id="refreshBtn">Refresh</button><div class="live"><span class="dot"></span><span id="status">Updating…</span></div></div>
-    </div>
-    <section class="grid">
-      <article class="card gold">
-        <div class="eyebrow"><span class="metal">Gold 24K</span><span>XAU</span></div>
-        <div class="price" id="gold10">₹—</div><div class="unit">per 10 grams</div>
-        <div class="subrow"><div class="metric">Per gram<b id="gold1">₹—</b></div><div class="metric">22K estimate<b id="gold22">₹—</b></div><div class="metric">USD / oz<b id="goldUsd">$—</b></div></div>
-      </article>
-      <article class="card silver">
-        <div class="eyebrow"><span class="metal">Silver</span><span>XAG</span></div>
-        <div class="price" id="silverKg">₹—</div><div class="unit">per kilogram</div>
-        <div class="subrow"><div class="metric">Per gram<b id="silver1">₹—</b></div><div class="metric">100 grams<b id="silver100">₹—</b></div><div class="metric">USD / oz<b id="silverUsd">$—</b></div></div>
-      </article>
-    </section>
-    <h2 class="section-title">Holding calculator</h2>
-    <section class="calc">
-      <div class="calc-grid">
-        <div class="field"><label>Metal</label><select id="metal"><option value="silver">Silver</option><option value="gold">Gold 24K</option></select></div>
-        <div class="field"><label>Weight (grams)</label><input id="weight" type="number" step="0.0001" value="112.9317" /></div>
-        <div class="field"><label>Your total buy cost (₹)</label><input id="cost" type="number" step="0.01" value="20000" /></div>
+<main class="wrap">
+  <div class="top">
+    <div class="brand"><h1>India Gold & Silver<br>Rates</h1><p>Raipur retail market · INR</p></div>
+    <div class="badge"><span class="dot"></span>Verified 17 Nov 2026</div>
+  </div>
+  <section class="grid">
+    <article class="card gold">
+      <div class="eyebrow"><strong>Gold 24K</strong><span>99.9%</span></div>
+      <div class="price">₹1,36,790</div><div class="unit">per 10 grams</div>
+      <div class="subrow">
+        <div class="metric">24K / gram<b>₹13,679</b></div>
+        <div class="metric">22K / 10g<b>₹1,25,390</b></div>
+        <div class="metric">18K / 10g<b>₹1,02,590</b></div>
       </div>
-      <div class="result"><div class="box"><span>Current value</span><strong id="currentValue">₹—</strong></div><div class="box"><span>Profit / Loss</span><strong id="pnl">₹—</strong></div><div class="box"><span>Return</span><strong id="returnPct">—%</strong></div></div>
-      <div class="error" id="error"></div>
-    </section>
-    <div class="footer">Rates are indicative spot estimates, not jeweller/MCX execution prices. Gold & silver spot data: Gold-API. USD/INR conversion: Frankfurter reference rate. GST, dealer spread, making charges and platform fees are not included. Auto-refreshes every 60 seconds.</div>
-  </main>
+    </article>
+    <article class="card silver">
+      <div class="eyebrow"><strong>Silver</strong><span>999</span></div>
+      <div class="price">₹1,89,900</div><div class="unit">per kilogram</div>
+      <div class="subrow">
+        <div class="metric">Per gram<b>₹189.90</b></div>
+        <div class="metric">100 grams<b>₹18,990</b></div>
+        <div class="metric">10 grams<b>₹1,899</b></div>
+      </div>
+    </article>
+  </section>
+  <h2 class="section-title">Your holding calculator</h2>
+  <section class="calc">
+    <div class="calc-grid">
+      <div class="field"><label>Metal</label><select id="metal"><option value="silver">Silver</option><option value="gold24">Gold 24K</option><option value="gold22">Gold 22K</option></select></div>
+      <div class="field"><label>Weight (grams)</label><input id="weight" type="number" step="0.0001" value="112.9317"></div>
+      <div class="field"><label>Total amount paid (₹)</label><input id="cost" type="number" step="0.01" value="20000"></div>
+    </div>
+    <div class="result">
+      <div class="box"><span>Current value</span><strong id="value">₹—</strong></div>
+      <div class="box"><span>Profit / Loss</span><strong id="pnl">₹—</strong></div>
+      <div class="box"><span>Return</span><strong id="ret">—%</strong></div>
+    </div>
+    <div class="source">
+      <a href="https://www.goodreturns.in/gold-rates/raipur.html" target="_blank" rel="noopener">Check live Gold source ↗</a>
+      <a href="https://www.goodreturns.in/silver-rates/raipur.html" target="_blank" rel="noopener">Check live Silver source ↗</a>
+    </div>
+  </section>
+  <div class="footer">Rates shown are Raipur retail reference rates and are indicative. Gold rates exclude GST, TCS, making charges and other levies. Silver rates are retail reference rates. Use the source buttons above for the latest published market rate.</div>
+</main>
 <script>
-const OZT_GRAMS = 31.1034768;
-let state = { goldPerGram: 0, silverPerGram: 0 };
-const fmtINR = n => new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:n>=100000?0:2}).format(n);
-const fmtUSD = n => new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:2}).format(n);
-function setText(id,v){document.getElementById(id).textContent=v}
-function calc(){const metal=document.getElementById('metal').value;const w=Number(document.getElementById('weight').value||0);const cost=Number(document.getElementById('cost').value||0);const perGram=metal==='silver'?state.silverPerGram:state.goldPerGram;const current=w*perGram;const pnl=current-cost;const pct=cost?100*pnl/cost:0;setText('currentValue',perGram?fmtINR(current):'₹—');const p=document.getElementById('pnl');p.textContent=perGram?`${pnl>=0?'+':''}${fmtINR(pnl)}`:'₹—';p.className=pnl>=0?'profit':'loss';const r=document.getElementById('returnPct');r.textContent=perGram?`${pct>=0?'+':''}${pct.toFixed(2)}%`:'—%';r.className=pct>=0?'profit':'loss'}
-async function getJSON(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json()}
-async function update(){const status=document.getElementById('status'),err=document.getElementById('error');status.textContent='Updating…';err.style.display='none';try{const [gold,silver,fx]=await Promise.all([getJSON('https://api.gold-api.com/price/XAU'),getJSON('https://api.gold-api.com/price/XAG'),getJSON('https://api.frankfurter.dev/v2/rate/USD/INR')]);const usdInr=fx.rate;state.goldPerGram=(gold.price*usdInr)/OZT_GRAMS;state.silverPerGram=(silver.price*usdInr)/OZT_GRAMS;setText('gold10',fmtINR(state.goldPerGram*10));setText('gold1',fmtINR(state.goldPerGram));setText('gold22',fmtINR(state.goldPerGram*(22/24)*10)+' / 10g');setText('goldUsd',fmtUSD(gold.price));setText('silverKg',fmtINR(state.silverPerGram*1000));setText('silver1',fmtINR(state.silverPerGram));setText('silver100',fmtINR(state.silverPerGram*100));setText('silverUsd',fmtUSD(silver.price));const now=new Date();status.textContent='Updated '+now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});calc()}catch(e){status.textContent='Update failed';err.textContent='Could not fetch live data. Please check your internet connection and try Refresh.';err.style.display='block';console.error(e)}}
-document.getElementById('refreshBtn').addEventListener('click',update);['metal','weight','cost'].forEach(id=>document.getElementById(id).addEventListener('input',calc));update();setInterval(update,60000);
+const rates={silver:189.90,gold24:13679,gold22:12539};
+const fmt=n=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(n);
+function calc(){const m=document.getElementById('metal').value;const w=Number(document.getElementById('weight').value||0);const c=Number(document.getElementById('cost').value||0);const v=w*rates[m];const p=v-c;const r=c?p/c*100:0;document.getElementById('value').textContent=fmt(v);const pe=document.getElementById('pnl');pe.textContent=(p>=0?'+':'')+fmt(p);pe.className=p>=0?'profit':'loss';const re=document.getElementById('ret');re.textContent=(r>=0?'+':'')+r.toFixed(2)+'%';re.className=r>=0?'profit':'loss'}
+['metal','weight','cost'].forEach(id=>document.getElementById(id).addEventListener('input',calc));calc();
 </script>
 </body>
 </html>
